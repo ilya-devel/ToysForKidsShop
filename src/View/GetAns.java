@@ -2,7 +2,6 @@ package View;
 
 import Classes.Toy;
 
-import javax.swing.text.View;
 import java.util.Scanner;
 
 public class GetAns {
@@ -55,7 +54,6 @@ public class GetAns {
             return Integer.parseInt(value);
         }
         catch (Exception ex) {
-//            Show.ShowUnvalidData();
             return -1;
         }
     }

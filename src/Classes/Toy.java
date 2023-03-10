@@ -3,7 +3,7 @@ package Classes;
 public class Toy implements Comparable<Toy>{
     private final int id;
     private final String name;
-    private final int weight;
+    private int weight;
 
     public Toy(int id, String name, int weight) {
         this.id = id;
@@ -15,14 +15,19 @@ public class Toy implements Comparable<Toy>{
         return name;
     }
 
+    public int getWeight() { return weight; }
+
+    public int getId() { return id; }
+
+    public void getToy() { this.weight--; }
+
     @Override
     public String toString() {
         return "" + id + " " + weight + " " + name;
-//                "Toy{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", weight=" + weight +
-//                '}';
+    }
+
+    public String howMuch() {
+        return "Общее количество " + this.name + " равно " + this.weight + "\n";
     }
 
     @Override

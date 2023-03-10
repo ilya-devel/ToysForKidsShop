@@ -6,8 +6,7 @@ public class Show {
     public static void MainMenu() {
         System.out.println("""
                 1. Положить призы в корзину
-                2. Использовать предыдущий список
-                3. Извлечь случайный приз из корзины
+                2. Извлечь случайный приз из корзины
                 0. Выйти
                 """);
     }
@@ -34,5 +33,9 @@ public class Show {
     }
     public static void UsingBeforeList() {
         System.out.println("Загружен предыдущий список");
+    }
+
+    public static void ShowMessage (String msg) {
+        System.out.println(msg);
     }
 }

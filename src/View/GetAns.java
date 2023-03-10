@@ -25,18 +25,29 @@ public class GetAns {
         return answer;
     }
 
-    public static Toy GetToys() {
-        Show.PutToyMessage();
+    public static Toy GetToysInfo() {
+        System.out.print("--> ");
         Scanner in = new Scanner(System.in);
-        String[] answer = in.nextLine().strip().split(" ", 3);
-        int id = GetIntValues(answer[0]);
-        int weight = GetIntValues(answer[1]);
-        String name = answer[2];
-        if (id != -1 && weight != -1) {
-            return new Toy(id, name, weight);
+        String ans = in.nextLine();
+        if (!ans.equals("")) {
+            try {
+                String[] answer = ans.strip().split(" ", 3);
+                int id = GetIntValues(answer[0]);
+                int weight = GetIntValues(answer[1]);
+                String name = answer[2];
+                if (id != -1 && weight != -1) {
+                    return new Toy(id, name, weight);
+                }
+                else {
+                    return null;
+                }
+            }
+            catch (Exception ex) {
+                return null;
+            }
         }
         else {
-            return null;
+            return new Toy(0,"-",0);
         }
     }
     public static int GetIntValues(String value) {

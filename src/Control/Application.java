@@ -32,7 +32,11 @@ public class Application {
                         WriteLogToGetPrize(fileName, "Призы закончились\n");
                     }
                 }
-                case 0 -> Show.ShowMessage("Завершение программы\n");
+                case 0 -> {
+                    Show.ShowMessage("Завершение программы\n");
+                    Show.ShowMessage("Журнал работы сохранён по адресу: " +
+                                    System.getProperty("user.dir") + " файл " + fileName);
+                }
             }
         } while (answer != 0);
     }
